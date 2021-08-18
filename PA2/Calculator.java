@@ -28,12 +28,12 @@ public class Calculator{
         }
     }
     public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
+        Scanner Input = new Scanner(System.in);
         int Numinput1,Numinput2;
         char operator;
         while(true){
             System.out.println("Give me a math expression with two ints (int__Operator__int");
-            Numinput1 = sc.nextInt();operator = sc.next().charAt(0);Numinput2 = sc.nextInt();
+            Numinput1 = Input.nextInt();operator = Input.next().charAt(0);Numinput2 = Input.nextInt();
             //check if within num constraints
             if(Math.abs(Numinput1)>=1000||Math.abs(Numinput2)>=1000){
                 System.out.println("Num out-of-bounds");
