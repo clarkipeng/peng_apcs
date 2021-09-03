@@ -7,13 +7,17 @@ public class sortcount{
     public static void main(String[]args){
         Scanner Input = new Scanner(System.in);
         System.out.println("Give 9 digit number");
-        String integer=Input.next();
+        long integer=Input.nextInt();
         int[] vals = new int[10];
         int[] count = new int[10];
         for(int i = 0; i< 10;i++)count[i]=0; //initialize count  to 0
         int size = 9;
+        long mod = (long)1e8;
         for(int i = 0; i <size;i++){//read in ints,count them
-            vals[i]=(integer.charAt(i)-'0');
+            vals[i]=(int)(integer/mod);
+            // System.out.println(vals[i]);
+            integer-=vals[i]*mod;
+            mod/=10;
             count[vals[i]]++;
         }
         int j,temp;
