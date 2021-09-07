@@ -27,7 +27,7 @@ public class sortcount{
             while(true){
                 //swap until you get to the end or the nextval is lesser
                 vals[j]=vals[j-1];
-                if(vals[j-1]<temp){
+                if(vals[j-1]<=temp){
                     vals[j]=temp;
                     break;
                 }
