@@ -27,6 +27,7 @@ class Student{
             System.out.print(Scores[i]+" ");
             avg+=Scores[i];
         }
+        System.out.println();
         avg/=size;
         System.out.println(avg);
     }
@@ -38,17 +39,15 @@ class Student{
             while(true){
                 //swap until you get to the end or the nextval is lesser
                 ary[j]=ary[j-1];
-                if(ary[j-1]<temp){
+                if(ary[j-1]<=temp){
                     ary[j]=temp;
                     break;
                 }
                 j--;
-                if(j==1){
-                    ary[j]=ary[j-1];
-                    ary[j-1]=temp;
+                if(j==0){
+                    ary[0]=temp;
                     break;
                 }
-                if(j==0)break;
             }
         }
     }

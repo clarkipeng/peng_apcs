@@ -32,12 +32,10 @@ public class sortcount{
                     break;
                 }
                 j--;
-                if(j==1){
-                    vals[j]=vals[j-1];
-                    vals[j-1]=temp;
+                if(j==0){
+                    vals[0]=temp;
                     break;
                 }
-                if(j==0)break;
             }
         }
         System.out.println("sorted: ");
