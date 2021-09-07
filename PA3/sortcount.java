@@ -37,6 +37,7 @@ public class sortcount{
                     vals[j-1]=temp;
                     break;
                 }
+                if(j==0)break;
             }
         }
         System.out.println("sorted: ");
