@@ -156,13 +156,25 @@ public class Player{
         pd = param/2+(int)(Math.random()*param/2);
         md =param-pd;
     }
-    public int generateMove(){
-        if(hp==10){
-            return (int)(Math.random()*3);
-        }
-        else{
-            return (int)(Math.random()*4);
-        }
+    public int generateMoveAgainst(Player enemy){
+        double move = Math.random();
+        double ppa,pma,pd,ph; //probability of physical,magic atacks, defense, healing
+        double scale=0;
+        ppa = (30-enemy.pd)-0.5*(enemy.pd);
+        pma = Math.max(0.0,ppa);
+        pma = (30-enemy.md)-1*(30-this.pd);
+        pma = Math.max(0.0,pma);
+        pd=(0.5*(this.pd)-(30-this.pd))-(30-this.md)+1*(30-enemy.pd);
+        pd = Math.max(0.0,pd);
+        if(hp==10) ph=0;
+        else ph = 30*.5+0.5*(this.pd)-(30-this.pd)-((30-this.md)+1*(30-enemy.pd));
+        ph = Math.max(0.0,pd);
+        scale =ph+pd+ppa+pma;
+        if(move<=ppa/scale)return 0;
+        else if (move<=(ppa+pma)/scale)return 1;
+        else if (move<=(ppa+pma+pd)/scale)return 2;
+        else if (move<=(ppa+pma+pd+ph)/scale)return 3;
+        return -1;
     }
     public void addHealth(double delta){
         hp+=delta;

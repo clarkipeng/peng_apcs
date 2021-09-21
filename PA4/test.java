@@ -28,7 +28,7 @@ public class test{
                 if(input<4&&input>=0)break;
                 else System.out.println("Not a valid move");
             }
-            int aimove = ai.generateMove();
+            int aimove = ai.generateMoveAgainst(p);
             System.out.println("you "+moves.get(input));
             System.out.println("your opponent "+moves.get(aimove));
             p.doAction(input, ai, aimove);
