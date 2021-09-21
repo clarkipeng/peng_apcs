@@ -3,17 +3,14 @@
 
 ## How to Run
 
-Compile test.java and run test
+Compile main.java.java and run main.java
 
 ```
-javac test.java && java test
+javac main.java.java && java main.java
 ```
 
 Expected Input 
-Give parameters for points into magic defense and physical defense
 
-8 12 
+Nothing
 
-Then give your character moves by inputing numbers 
-1: attack, 2: magic attack 3: defend 4: heal
 
