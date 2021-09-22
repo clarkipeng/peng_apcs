@@ -4,7 +4,6 @@ import java.io.*;
 
 
 public class test{
-
     public static void main(String[]args){
         Scanner Input = new Scanner(System.in);
         Player p = new Player("Player");
@@ -32,7 +31,6 @@ public class test{
             System.out.println("you "+moves.get(input));
             System.out.println("your opponent "+moves.get(aimove));
             p.doAction(input, ai, aimove);
-            
         }
         if(p.hp<=0)System.out.println("YOU LOSE!");
         else System.out.println("YOU WIN!");
