@@ -168,7 +168,8 @@ public class Player{
         pd = Math.max(0.0,pd);
         if(hp==10) ph=0;
         else ph = 30*.5+0.5*(this.pd)-(30-this.pd)-((30-this.md)+1*(30-enemy.pd));
-        ph = Math.max(0.0,pd);
+        ph = Math.max(0.0,ph);
+        ppa+=5;pma+=5;pd+=5;
         scale =ph+pd+ppa+pma;
         if(move<=ppa/scale)return 0;
         else if (move<=(ppa+pma)/scale)return 1;

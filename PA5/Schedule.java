@@ -4,8 +4,7 @@ public class Schedule {
     public Schedule(){
         classes = new String[] {"studyhall","studyhall","studyhall","studyhall",
         "studyhall","studyhall","studyhall","studyhall",};
-        times = new double[] {90,90,90,90,
-        90,90,90,90,};
+        times = new double[] {90,90,90,90,90,90,90,90,};
     }
     public Schedule(Schedule other){
         classes=other.classes.clone();

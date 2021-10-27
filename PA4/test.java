@@ -21,7 +21,7 @@ public class test{
             int input=-1;
             while(input<0||input>3){
                 System.out.println("What action will you take against your opponent?"+ 
-                                " {1: attack,2: spell,3: defend,4:heal}");
+                                " {1: attack,2: spell,3: defend,4: heal}");
                 input = Input.nextInt();
                 input--;
                 if(input<4&&input>=0)break;
